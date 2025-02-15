@@ -8,6 +8,7 @@ import com.blbulyandavbulyan.studentdbpopulator.generators.ExamResultGenerator;
 import com.blbulyandavbulyan.studentdbpopulator.generators.StudentGenerator;
 import com.blbulyandavbulyan.studentdbpopulator.generators.SubjectGenerator;
 import com.blbulyandavbulyan.studentdbpopulator.generators.TutorGenerator;
+import com.blbulyandavbulyan.studentdbpopulator.repositories.ExamResultRepository;
 import com.blbulyandavbulyan.studentdbpopulator.repositories.StudentRepository;
 import com.blbulyandavbulyan.studentdbpopulator.repositories.SubjectRepository;
 import com.blbulyandavbulyan.studentdbpopulator.repositories.TutorRepository;
@@ -33,6 +34,7 @@ public class DbInitializationService {
     private final StudentRepository studentRepository;
     private final TutorRepository tutorRepository;
     private final SubjectRepository subjectRepository;
+    private final ExamResultRepository examResultRepository;
 
     @Transactional
     public void initialize() {
@@ -43,6 +45,6 @@ public class DbInitializationService {
         studentRepository.save(students);
         tutorRepository.save(tutors);
         subjectRepository.save(subjects);
-
+        examResultRepository.save(examResults);
     }
 }
