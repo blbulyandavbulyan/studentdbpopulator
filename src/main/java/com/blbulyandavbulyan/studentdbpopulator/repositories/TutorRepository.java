@@ -1,6 +1,5 @@
 package com.blbulyandavbulyan.studentdbpopulator.repositories;
 
-import com.blbulyandavbulyan.studentdbpopulator.entity.Student;
 import com.blbulyandavbulyan.studentdbpopulator.entity.Tutor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
